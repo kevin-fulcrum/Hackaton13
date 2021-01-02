@@ -1,6 +1,7 @@
 import React from 'react'
-import {View, Text, StyleSheet, Image} from 'react-native'
+import {View, Text, StyleSheet, Image, FlatList, Animated} from 'react-native'
 import Menu from './src/component/menu/Menu'
+import {Data} from './src/resource/Data'
 
 const styles=StyleSheet.create({
     textTitle:{
@@ -25,6 +26,7 @@ const styles=StyleSheet.create({
 });
 
 const App =()=>{
+  const scrollX = new Animated.Value(0);
   return(
     <>
     <View style={styles.containerInit}>
@@ -37,7 +39,23 @@ const App =()=>{
       </Image>
     </View>
     <View style={styles.container2}>
-      <Menu></Menu>
+        <FlatList
+          data={Data}
+          keyExtractor={(item, index) => 'key' + index}
+          horizontal
+          scrollEnabled
+          snapToAlignment="center"
+          scrollEventThrottle={16}
+          decelerationRate="fast"
+          showsHorizontalScrollIndicator={false}
+          renderItem={(item) => {
+            return <Menu item={item.item} />;
+          }}
+          onScroll={Animated.event([
+            {nativeEvent: {contentOffset: {x: scrollX}}}],
+            {useNativeDriver: false}
+          )}
+        />
     </View>
     </>
   )
