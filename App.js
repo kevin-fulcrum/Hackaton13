@@ -1,11 +1,11 @@
 import React from 'react'
 import {View, Text, StyleSheet, Image} from 'react-native'
+import Menu from './src/component/menu/Menu'
 
 const styles=StyleSheet.create({
     textTitle:{
       fontSize: 30,
       marginRight: 160,
-      fontWeight: 'bold'
     },
     containerInit:{
       flex: 0.15,
@@ -17,11 +17,16 @@ const styles=StyleSheet.create({
       width: 50,
       height: 50,
       borderRadius: 50,
-    }
+    },
+    container2: {
+      flex: 0.2,
+      flexDirection: 'row',
+    },
 });
 
 const App =()=>{
   return(
+    <>
     <View style={styles.containerInit}>
       <Text style={styles.textTitle}>Podcasts</Text>
       <Image
@@ -31,6 +36,13 @@ const App =()=>{
         style={styles.imagePerfil}> 
       </Image>
     </View>
+    <View style={styles.container2}>
+      <Menu></Menu>
+      <Menu></Menu>
+      <Menu></Menu>
+      <Menu></Menu>
+    </View>
+    </>
   )
 };
 
