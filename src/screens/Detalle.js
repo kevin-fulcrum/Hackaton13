@@ -25,11 +25,22 @@ const styles=StyleSheet.create({
     textDetalle:{
         fontWeight: 'bold',
         fontSize: 50,
-        marginLeft: 20
+        marginLeft: 45
     },
     textDetalleDetalle: {
         fontSize: 20,
-        marginLeft: 20
+        marginLeft: 45,
+        marginTop: 20
+    },
+    textDatos:{
+        color: '#93C9F3',
+        marginLeft: 45,
+        fontSize: 50
+    },
+    textDatosDetalle:{
+        color: 'black',
+        marginLeft: 45,
+        fontSize: 15
     },
 });
 
@@ -53,6 +64,20 @@ const Detalle =()=>{
     <View style={styles.container2}>
         <Text style={styles.textDetalle}>Discover    podcast</Text>
         <Text style={styles.textDetalleDetalle}>Montond e c osa shsdfufdsfhj</Text>
+        <View style={{flexDirection: 'row', marginTop: 20}}>
+            <View>
+            <Text style={styles.textDatos}>900</Text>
+            <Text style={styles.textDatosDetalle}>algunas</Text>
+            </View>
+            <View>
+            <Text style={styles.textDatos}>120</Text>
+            <Text style={styles.textDatosDetalle}>algunas</Text>
+            </View>
+            <View>
+            <Text style={styles.textDatos}>31</Text>
+            <Text style={styles.textDatosDetalle}>algunas</Text>
+            </View>
+        </View>
     </View>
     </>
   )
