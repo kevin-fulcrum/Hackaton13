@@ -38,9 +38,6 @@ const App =()=>{
     </View>
     <View style={styles.container2}>
       <Menu></Menu>
-      <Menu></Menu>
-      <Menu></Menu>
-      <Menu></Menu>
     </View>
     </>
   )
