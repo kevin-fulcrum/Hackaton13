@@ -28,6 +28,11 @@ const styles=StyleSheet.create({
     container3: {
       flex: 0.65,
     },
+    textTitleSec:{
+      fontSize: 20,
+      marginLeft: 30,
+      marginTop: 10
+    }
 });
 
 const App =()=>{
@@ -62,7 +67,7 @@ const App =()=>{
           )}
         />
     </View>
-    <Text style={styles.textTitle}>Populer</Text>
+    <Text style={styles.textTitleSec}>Populer</Text>
     <View style={styles.container3}>
     <FlatList
           data={MusicData}
