@@ -35,7 +35,7 @@ const styles=StyleSheet.create({
     }
 });
 
-const Principal =()=>{
+const Principal =({navigation})=>{
   const scrollX = new Animated.Value(0);
   return(
     <>
@@ -79,7 +79,7 @@ const Principal =()=>{
           decelerationRate="fast"
           showsHorizontalScrollIndicator={false}
           renderItem={(item) => {
-            return <Card item={item.item} />;
+            return <Card navigation={navigation} item={item.item} />;
           }}
           onScroll={Animated.event([
             {nativeEvent: {contentOffset: {x: scrollX}}}],

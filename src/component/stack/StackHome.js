@@ -14,7 +14,7 @@ const StackHome = () =>{
     return(
         <NavigationContainer>
         <Stack.Navigator
-        initialRouteName="Detalle" 
+        initialRouteName="Principal" 
         screenOptions={{cardStyleInterpolator:forFade,}}>
             <Stack.Screen
             name="Principal"
