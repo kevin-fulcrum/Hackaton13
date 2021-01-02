@@ -24,7 +24,10 @@ const StackHome = () =>{
             <Stack.Screen
             name="Detalle"
             component={Detalle}
-            options={{header: () => null}}
+            options={({route}) => ({
+                title: route.params.title,
+                headerBackTitle: '',
+              })}
             />
             </Stack.Navigator>
         </NavigationContainer>

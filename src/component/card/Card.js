@@ -40,7 +40,7 @@ const styles=StyleSheet.create({
 const Card =({navigation, item})=>{
   return(
     <>
-    <TouchableOpacity onPress={()=>{navigation.navigate('Detalle')}} style={styles.constainerCard}>
+    <TouchableOpacity onPress={()=>{navigation.navigate('Detalle', item)}} style={styles.constainerCard}>
         <View style={styles.imagenes}>
         <View>
             <Image

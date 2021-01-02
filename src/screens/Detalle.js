@@ -33,13 +33,13 @@ const styles=StyleSheet.create({
     },
 });
 
-const Detalle =()=>{
+const Detalle =({route})=>{
   return(
     <>
     <View style={styles.container1}>
       <Image
         source={{
-        uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcTyZ6ZRQxNzn65KdrSyG0ckL3PE5SNY1zDw&usqp=CAU',
+        uri: route.params.url,
         }}
         style={styles.imagePrincipal}> 
       </Image>
@@ -51,8 +51,8 @@ const Detalle =()=>{
       </Image>
     </View>
     <View style={styles.container2}>
-        <Text style={styles.textDetalle}>Discover    podcast</Text>
-        <Text style={styles.textDetalleDetalle}>Montond e c osa shsdfufdsfhj</Text>
+        <Text style={styles.textDetalle}>{route.params.title}</Text>
+        <Text style={styles.textDetalleDetalle}>{route.params.descripcion}</Text>
     </View>
     </>
   )
