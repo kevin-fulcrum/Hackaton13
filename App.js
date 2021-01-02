@@ -2,6 +2,7 @@ import React from 'react'
 import {View, Text, StyleSheet, Image, FlatList, Animated} from 'react-native'
 import Menu from './src/component/menu/Menu'
 import {Data} from './src/resource/Data'
+import {MusicData} from './src/resource/MusicData'
 import Card from './src/component/card/Card'
 
 const styles=StyleSheet.create({
@@ -63,7 +64,24 @@ const App =()=>{
     </View>
     <Text style={styles.textTitle}>Populer</Text>
     <View style={styles.container3}>
-    <Card></Card>
+    <FlatList
+          data={MusicData}
+          keyExtractor={(item, index) => 'key' + index}
+          vertical
+          scrollEnabled
+          snapToAlignment="center"
+          scrollEventThrottle={16}
+          decelerationRate="fast"
+          showsHorizontalScrollIndicator={false}
+          renderItem={(item) => {
+            return <Card item={item.item} />;
+          }}
+          onScroll={Animated.event([
+            {nativeEvent: {contentOffset: {x: scrollX}}}],
+            {useNativeDriver: false}
+          )}
+        />
+    
     </View>
     </>
   )

@@ -16,7 +16,6 @@ const styles=StyleSheet.create({
 });
 
 const Menu =({item})=>{
-  console.warn(item)
   return(
     <>
     <View style={styles.containerImage}>

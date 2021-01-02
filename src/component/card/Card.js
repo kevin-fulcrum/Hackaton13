@@ -8,8 +8,6 @@ const styles=StyleSheet.create({
         marginVertical: 30,
         borderRadius: 20,
         backgroundColor: '#E9E6E6',
-    },
-    imagenes:{
         flexDirection: 'row'
     },
     imageCard: {
@@ -18,15 +16,16 @@ const styles=StyleSheet.create({
     }
 });
 
-const Card =()=>{
+const Card =({item})=>{
+    console.warn(item)
   return(
     <>
+    <TouchableOpacity>
     <View style={styles.constainerCard}>
-        <TouchableOpacity style={styles.imagenes}>
         <View>
             <Image
             source={{
-            uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcTyZ6ZRQxNzn65KdrSyG0ckL3PE5SNY1zDw&usqp=CAU',
+            uri: item.url,
             }}
             style={styles.imageCard}> 
             </Image>
@@ -39,9 +38,9 @@ const Card =()=>{
             style={styles.imageCard}> 
             </Image>
         </View>
-        </TouchableOpacity>
         <Text>card</Text>
     </View>
+    </TouchableOpacity>
     </>
   )
 };
