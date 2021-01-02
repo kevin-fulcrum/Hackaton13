@@ -37,7 +37,7 @@ const styles=StyleSheet.create({
     },
 });
 
-const Card =()=>{
+const Card =({item})=>{
   return(
     <>
     <TouchableOpacity style={styles.constainerCard}>
@@ -45,7 +45,7 @@ const Card =()=>{
         <View>
             <Image
             source={{
-            uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcTyZ6ZRQxNzn65KdrSyG0ckL3PE5SNY1zDw&usqp=CAU',
+            uri: item.url,
             }}
             style={styles.imageCardx}> 
             </Image>
@@ -53,14 +53,14 @@ const Card =()=>{
         <View>
             <Image
             source={{
-            uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcTyZ6ZRQxNzn65KdrSyG0ckL3PE5SNY1zDw&usqp=CAU',
+            uri: 'https://cdn.icon-icons.com/icons2/1132/PNG/512/1486348532-music-play-pause-control-go-arrow_80458.png',
             }}
             style={styles.imageCardS}> 
             </Image>
         </View>
         </View>
-        <Text style={styles.titleCard}>Discover podcasts</Text>
-        <Text style={styles.titleCardDetall}>Podcasts Lampa faedah apapum yang ingin kami bicarakan</Text>
+        <Text style={styles.titleCard}>{item.title}</Text>
+        <Text style={styles.titleCardDetall}>{item.descripcion}</Text>
     </TouchableOpacity>
     </>
   )
