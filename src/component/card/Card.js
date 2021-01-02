@@ -34,6 +34,7 @@ const styles=StyleSheet.create({
     titleCardDetall:{
         marginLeft: 20,
         marginTop: 10,
+        marginBottom: 20
     },
 });
 
