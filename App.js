@@ -1,6 +1,7 @@
 import React from 'react'
 import {View, Text, StyleSheet, Image} from 'react-native'
 import Menu from './src/component/menu/Menu'
+import Card from './src/component/card/Card'
 
 const styles=StyleSheet.create({
     textTitle:{
@@ -22,6 +23,9 @@ const styles=StyleSheet.create({
       flex: 0.2,
       flexDirection: 'row',
     },
+    container3: {
+      flex: 0.65,
+    },
 });
 
 const App =()=>{
@@ -38,6 +42,10 @@ const App =()=>{
     </View>
     <View style={styles.container2}>
       <Menu></Menu>
+    </View>
+    <Text style={styles.textTitle}>Populer</Text>
+    <View style={styles.container3}>
+    <Card></Card>
     </View>
     </>
   )
