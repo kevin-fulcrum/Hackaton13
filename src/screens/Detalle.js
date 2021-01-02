@@ -45,6 +45,7 @@ const styles=StyleSheet.create({
 });
 
 const Detalle =({route})=>{
+  {console.log("Navigation", route)}
   return(
     <>
     <View style={styles.container1}>
